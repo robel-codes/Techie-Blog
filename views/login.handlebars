@@ -1,0 +1,43 @@
+<div class="form-wrapper">
+    <header class="form-header">
+        Login
+    </header>
+    <div class="form-body">
+        <form class="form-login">
+            <div class="input-group">
+                <label for="username-login">Username:</label>
+                <input type="text" id="username-login" />
+            </div>
+            <div class="input-group">
+                <label for="password-login">Password:</label>
+                <input type="password" id="password-login" />
+            </div>
+            <div>
+                <button class="standout" type="submit" data-route="/login">Login</button>
+            </div>
+            </form>
+    </div>
+</div> 
+
+<div class="form-wrapper">
+    <header class="form-header">
+        Sign up
+    </header>
+    <div class="form-body">
+        <form class="form-signup">
+            <div class="input-group">
+                <label for="username-signup">Username:</label>
+                <input type="text" id="username-signup" />
+            </div>
+            <div class="input-group">
+                <label for="password-signup">Password:</label>
+                <input type="password" id="password-signup" minlength="4" required />
+            </div>
+            <div>
+            <button class="standout" type="submit" data-route="/signup">Sign Up!</button>
+            </div>
+        </form>
+    </div> 
+</div> 
+
+<script src="/javascript/login.js"></script>
