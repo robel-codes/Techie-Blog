@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment} = require('../models');
 
 // get all posts for dashboard
-router.get('/', withAuth, (req, res) => {
+router.get('/', (req, res) => {
   console.log(req.session);
   console.log('======================');
   Post.findAll({
@@ -29,7 +29,7 @@ router.get('/', withAuth, (req, res) => {
       const posts = dbPostData.map(post => post.get({ plain: true }));
       res.render('dashboard', { 
           posts, 
-          //loggedIn: true 
+          loggedIn: true 
         });
     })
     .catch(err => {
@@ -38,7 +38,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-router.get('/edit/:id', withAuth, (req, res) => {
+router.get('/edit/:id', (req, res) => {
   Post.findByPk(req.params.id, {
     include: [
       {
@@ -61,7 +61,7 @@ router.get('/edit/:id', withAuth, (req, res) => {
         
         res.render('edit-post', {
           post,
-          //loggedIn: true
+          loggedIn: true
         });
       } else {
         res.status(404).end();
