@@ -7,14 +7,14 @@
             <form class="form-new-post">
                 <div class="input-group">
                     <label for="new-title">Title:</label>
-                    <input id="new-title" type="text" class="editing" value="{{post_title}}"></input>
+                    <input id="new-title" type="text" class="editing" name="new-title" ></input>
                 </div>
                 <div class="input-group">
                     <label for="new-text">Description:</label>
-                    <textarea id="new-text" class="editing">{{post_text}}</textarea>
+                    <textarea id="new-text" class="editing" name="new-text"></textarea>
                 </div>
                 <div class="preview-buttons">
-                    <button class="create-post standout">Create</button>
+                    <button class="create-post standout" type="submit">Create</button>
                 </div>
             </form>
         </div> 
