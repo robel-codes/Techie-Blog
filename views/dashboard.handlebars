@@ -1,0 +1,16 @@
+<div class="dashboard-btn-wrapper">
+        <a href="/dashboard/new">Add New Post</a>
+</div>
+{{#if posts.length}}
+<div class="dashboard-posts-wrapper">
+    {{#each posts as |post|}}
+    <div class="dashboard-post-wrapper">
+        {{> post-info post}}
+    </div>
+    {{/each}}
+</div> 
+{{/if}}
+
+
+<script src="/javascript/add-post.js"></script>
+
