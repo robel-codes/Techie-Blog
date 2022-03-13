@@ -23,7 +23,11 @@
                     <a href="/dashboard">Dashboard</a>
                 </li>
                 <li>
+                    {{#if loggedIn}}
+                    <a href="/" id="logout">Logout</a>
+                    {{else}}
                     <a href="/login">Login</a>
+                    {{/if}}
                 </li>
             </ul>
         </nav>
@@ -34,6 +38,12 @@
     <main class="container">
         {{{body}}}
     </main>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{else}}
+    <script src="/javascript/login.js"></script>
+    {{/if}}
 
 </body>
 </html>
