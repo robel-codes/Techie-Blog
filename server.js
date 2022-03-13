@@ -8,7 +8,7 @@ const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const helpers = require('./utils/helpers');
 const hbs = exphbs.create({ helpers });
 
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 
 const sess = {
     secret: process.env.SECRET,
@@ -33,7 +33,7 @@ const routes = require('./controllers');
 app.use(routes)
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => {
+    app.listen(port, () => {
         console.log('Now listening on 3001')
     })
 })
