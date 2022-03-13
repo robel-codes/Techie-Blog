@@ -1,0 +1,11 @@
+{{#each this}}
+    <div class="comment-wrapper">
+        <div class="comment-header">&nbsp;</div>
+        <div class="comment__body__footer">
+            <div>{{comment_text}}</div>
+            <footer class="comment-footer">
+                — {{user.username}}, {{format_date created_at}}
+            </footer>
+        </div>
+    </div>
+{{/each}}

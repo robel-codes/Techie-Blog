@@ -1,0 +1,25 @@
+<div class="posts-wrapper">
+    <div class="post-wrapper">
+        <header class="post-header">
+            Create New Post
+        </header>
+        <div class="post-body">
+            <form class="form-new-post">
+                <div class="input-group">
+                    <label for="new-title">Title:</label>
+                    <input id="new-title" type="text" class="editing" value="{{post_title}}"></input>
+                </div>
+                <div class="input-group">
+                    <label for="new-text">Description:</label>
+                    <textarea id="new-text" class="editing">{{post_text}}</textarea>
+                </div>
+                <div class="preview-buttons">
+                    <button class="create-post standout">Create</button>
+                </div>
+            </form>
+        </div> 
+
+    </div> 
+</div> 
+
+<script src="/javascript/add-post.js"></script>
