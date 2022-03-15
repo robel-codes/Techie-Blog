@@ -31,7 +31,7 @@ Step 3. Source the schema
 
 Step 4. Seed the tables 
 ```
-node run seeds
+npm run seeds
 ```
 
 Step 5. Start the server .
